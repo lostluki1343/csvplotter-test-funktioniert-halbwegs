@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="'Plot: ' + ${plot.filename}">Plot</title>
+</head>
+
+
+<body>
+    <h1 th:text="${plot.filename}">Plot</h1>
+    <img th:src="@{'/plots/' + ${plot.id} + '/image'}" alt="Plot-Bild" />
+    <p><a th:href="@{/plots}">Zurück zur Liste</a></p>
+</body>
+</html>
